@@ -69,23 +69,39 @@
         padding: 15px;
         border-radius: 10px;
       }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
 
       .controls {
-        position: absolute;
+        position: fixed;
         bottom: 20px;
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: 15px;
         z-index: 10;
       }
 
-      button {
-        font-family: "Montserrat", serif;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
-        border: 1px solid grey;
-        padding: 4px 8px;
+      /* ปรับให้ปุ่มจัดเรียงแนวตั้งเมื่อหน้าจอเล็ก */
+      @media (max-width: 768px) {
+        .buttons {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .controls {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        button {
+          width: 80%;
+          max-width: 200px;
+        }
       }
     </style>
   </head>

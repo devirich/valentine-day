@@ -1,7 +1,7 @@
 import Spheres1Background from './min.js'
 
 const bg = Spheres1Background(document.getElementById('webgl-canvas'), {
-  count: 200,
+  count: 100,
   minSize: 0.3,
   maxSize: 1,
   gravity: 0.5
